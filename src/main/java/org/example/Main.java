@@ -1,12 +1,20 @@
 package org.example;
 
 class kid{
-    int age = 0;
-    
+    int age;
+    String sex;
 }
+class adopter{
+    int age;
+    String sex;
+}
+class shelter{
+    String name;
+}
+
 public class Main {
     static void main() {
-        IO.println(String.format("Hello and welcome!"));
+        IO.println("Hello and welcome!");
         for (int i = 1; i <= 5; i++) {
             IO.println("i = " + i);
         }

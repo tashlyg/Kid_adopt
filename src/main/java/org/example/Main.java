@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 class kid{
     String name;
     int age;
@@ -10,6 +12,32 @@ class kid{
         this.age = age;
         this.gender = gender;
         this.disease = disease;
+    }
+
+    void setName(String name){
+        this.name = name;
+    }
+    void setAge(int age){
+        this.age = age;
+    }
+    void setGender(String gender){
+        this.gender = gender;
+    }
+    void setDisease(String disease){
+        this.disease = disease;
+    }
+
+    String getName(){
+        return this.name;
+    }
+    int getAge(){
+        return this.age;
+    }
+    String getGender(){
+        return this.gender;
+    }
+    String getDisease(){
+        return this.disease;
     }
 }
 
@@ -22,6 +50,26 @@ class adopter{
         this.age = age;
         this.gender = gender;
     }
+
+    void setName(String name){
+        this.name = name;
+    }
+    void setAge(int age){
+        this.age = age;
+    }
+    void setGender(String gender){
+        this.gender = gender;
+    }
+
+    String getName(){
+        return this.name;
+    }
+    int getAge(){
+        return this.age;
+    }
+    String getGender(){
+        return this.gender;
+    }
 }
 class shelter{
     String name;
@@ -32,22 +80,49 @@ class shelter{
         this.location = location;
         this.places = places;
     }
+    void setName(String name){
+        this.name = name;
+    }
+    void setLocation(String location){
+        this.location = location;
+    }
+    void setPlaces(int places){
+        this.places = places;
+    }
+
+    String getName(){
+        return this.name;
+    }
+    String getLocation(){
+        return this.location;
+    }
+    int getPlaces(){
+        return this.places;
+    }
 }
 
 public class Main {
     static void main() {
         IO.println("Hello world!");
 
-        adopter adopter1 = new adopter("Briar Morrow", 30, "Famale");
+        adopter adopter1 = new adopter("Briar Morrow", 30, "Female");
         adopter adopter2 = new adopter("Reyna Chang", 40, "Male");
 
-        kid kid1 = new kid("Fatima Copeland", 7, "Female", "healthy");
-        kid kid2 = new kid("Keegan Lu", 10, "Male", "No left arm");
+        kid kid1 = new kid("Fatima Copeland", 7, "Female", "Healthy");
+        kid kid2 = new kid("Keegan Lu", 10, "Male", "He doesn't have left arm");
         kid kid3 = new kid("Benson Curtis", 14, "Male", "Brainroot");
 
         shelter shelter1 = new shelter("Det dom", "London", 14);
 
-        int i = 1;
-        IO.println("i = " + i);
+        IO.println("First kid name, age, gender and disease: " + kid1.getName() +", "+ kid1.getAge() +", "+ kid1.getGender() +", "+ kid1.getDisease()+'.');
+        if(kid2.getAge() == kid3.getAge()){
+            IO.println("for the task: compare multiple objects");
+        }
+        else if(Objects.equals(kid1.getGender(), adopter1.getGender())){
+            IO.println("for the task: compare multiple objects");
+        }
+        else{
+            IO.println("br br skibidi");
+        }
     }
 }

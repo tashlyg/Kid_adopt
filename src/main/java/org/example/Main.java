@@ -4,8 +4,6 @@ import java.util.Objects;
 
 public class Main {
     static void main() {
-        IO.println("Hello world!");
-
         Adopter adopter1 = new Adopter("Briar Morrow", 30, "Female");
         Adopter adopter2 = new Adopter("Reyna Chang", 40, "Male");
 
@@ -16,6 +14,7 @@ public class Main {
         Shelter shelter1 = new Shelter("Det dom", "London", 14);
 
         IO.println("First kid name, age, gender and disease: " + kid1.getName() +", "+ kid1.getAge() +", "+ kid1.getGender() +", "+ kid1.getDisease()+'.');
+
         if(kid2.getAge() == kid3.getAge()){
             IO.println("for the task: compare multiple objects");
         }

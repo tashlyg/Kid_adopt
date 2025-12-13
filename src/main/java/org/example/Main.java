@@ -13,15 +13,15 @@ class kid{
         this.gender = gender;
         this.disease = disease;
     }
+    public kid(){
+        this.name = "unknown";
+        this.age = age;
+        this.gender = gender;
+        this.disease = disease;
+    }
 
     void setName(String name){
         this.name = name;
-    }
-    void setAge(int age){
-        this.age = age;
-    }
-    void setGender(String gender){
-        this.gender = gender;
     }
     void setDisease(String disease){
         this.disease = disease;
@@ -54,9 +54,6 @@ class adopter{
     void setName(String name){
         this.name = name;
     }
-    void setAge(int age){
-        this.age = age;
-    }
     void setGender(String gender){
         this.gender = gender;
     }
@@ -82,9 +79,6 @@ class shelter{
     }
     void setName(String name){
         this.name = name;
-    }
-    void setLocation(String location){
-        this.location = location;
     }
     void setPlaces(int places){
         this.places = places;

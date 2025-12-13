@@ -2,18 +2,18 @@ package org.example;
 
 import java.util.Objects;
 
-class kid{
+class Kid{
     String name;
     int age;
     String gender;
     String disease;
-    public kid(String name, int age, String gender, String disease){
+    public Kid(String name, int age, String gender, String disease){
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.disease = disease;
     }
-    public kid(){
+    public Kid(){
         this.name = "unknown";
         this.age = -1;
         this.gender = "unknown";
@@ -41,16 +41,16 @@ class kid{
     }
 }
 
-class adopter{
+class Adopter{
     String name;
     int age;
     String gender;
-    public adopter(String name, int age, String gender){
+    public Adopter(String name, int age, String gender){
         this.name = name;
         this.age = age;
         this.gender = gender;
     }
-    public adopter(){
+    public Adopter(){
         this.name = "unknown";
         this.age = -1;
         this.gender = "unknown";
@@ -73,16 +73,16 @@ class adopter{
         return this.gender;
     }
 }
-class shelter{
+class Shelter{
     String name;
     String location;
     int places;
-    public shelter(String name, String location, int places){
+    public Shelter(String name, String location, int places){
         this.name = name;
         this.location = location;
         this.places = places;
     }
-    public shelter(){
+    public Shelter(){
         this.name = "unknown";
         this.location = "unknown";
         this.places = -1;
@@ -110,14 +110,14 @@ public class Main {
     static void main() {
         IO.println("Hello world!");
 
-        adopter adopter1 = new adopter("Briar Morrow", 30, "Female");
-        adopter adopter2 = new adopter("Reyna Chang", 40, "Male");
+        Adopter adopter1 = new adopter("Briar Morrow", 30, "Female");
+        Adopter adopter2 = new adopter("Reyna Chang", 40, "Male");
 
-        kid kid1 = new kid("Fatima Copeland", 7, "Female", "Healthy");
-        kid kid2 = new kid("Keegan Lu", 10, "Male", "He doesn't have left arm");
-        kid kid3 = new kid("Benson Curtis", 14, "Male", "Brainroot");
+        Kid kid1 = new kid("Fatima Copeland", 7, "Female", "Healthy");
+        Kid kid2 = new kid("Keegan Lu", 10, "Male", "He doesn't have left arm");
+        Kid kid3 = new kid("Benson Curtis", 14, "Male", "Brainroot");
 
-        shelter shelter1 = new shelter("Det dom", "London", 14);
+        Shelter shelter1 = new shelter("Det dom", "London", 14);
 
         IO.println("First kid name, age, gender and disease: " + kid1.getName() +", "+ kid1.getAge() +", "+ kid1.getGender() +", "+ kid1.getDisease()+'.');
         if(kid2.getAge() == kid3.getAge()){

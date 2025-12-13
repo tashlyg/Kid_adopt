@@ -2,9 +2,6 @@ package org.example;
 
 import java.util.Objects;
 
-
-
-
 public class Main {
     static void main() {
         IO.println("Hello world!");

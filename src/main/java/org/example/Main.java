@@ -15,9 +15,9 @@ class kid{
     }
     public kid(){
         this.name = "unknown";
-        this.age = age;
-        this.gender = gender;
-        this.disease = disease;
+        this.age = -1;
+        this.gender = "unknown";
+        this.disease = "unknown";
     }
 
     void setName(String name){
@@ -50,6 +50,11 @@ class adopter{
         this.age = age;
         this.gender = gender;
     }
+    public adopter(){
+        this.name = "unknown";
+        this.age = -1;
+        this.gender = "unknown";
+    }
 
     void setName(String name){
         this.name = name;
@@ -77,6 +82,12 @@ class shelter{
         this.location = location;
         this.places = places;
     }
+    public shelter(){
+        this.name = "unknown";
+        this.location = "unknown";
+        this.places = -1;
+    }
+
     void setName(String name){
         this.name = name;
     }

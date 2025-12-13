@@ -1,6 +1,6 @@
 package org.example;
 
-public class Kid{
+class Kid{
     String name;
     int age;
     String gender;

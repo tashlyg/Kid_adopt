@@ -110,14 +110,14 @@ public class Main {
     static void main() {
         IO.println("Hello world!");
 
-        Adopter adopter1 = new adopter("Briar Morrow", 30, "Female");
-        Adopter adopter2 = new adopter("Reyna Chang", 40, "Male");
+        Adopter adopter1 = new Adopter("Briar Morrow", 30, "Female");
+        Adopter adopter2 = new Adopter("Reyna Chang", 40, "Male");
 
-        Kid kid1 = new kid("Fatima Copeland", 7, "Female", "Healthy");
-        Kid kid2 = new kid("Keegan Lu", 10, "Male", "He doesn't have left arm");
-        Kid kid3 = new kid("Benson Curtis", 14, "Male", "Brainroot");
+        Kid kid1 = new Kid("Fatima Copeland", 7, "Female", "Healthy");
+        Kid kid2 = new Kid("Keegan Lu", 10, "Male", "He doesn't have left arm");
+        Kid kid3 = new Kid("Benson Curtis", 14, "Male", "Brainroot");
 
-        Shelter shelter1 = new shelter("Det dom", "London", 14);
+        Shelter shelter1 = new Shelter("Det dom", "London", 14);
 
         IO.println("First kid name, age, gender and disease: " + kid1.getName() +", "+ kid1.getAge() +", "+ kid1.getGender() +", "+ kid1.getDisease()+'.');
         if(kid2.getAge() == kid3.getAge()){

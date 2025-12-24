@@ -1,14 +1,9 @@
 package org.example;
 
-class Kid{
-    String name;
-    int age;
-    String gender;
+public class Kid extends Human{
     String disease;
     public Kid(String name, int age, String gender, String disease){
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+        super(name, age, gender);
         this.disease = disease;
     }
     public Kid(){
@@ -36,5 +31,20 @@ class Kid{
     }
     String getDisease(){
         return this.disease;
+    }
+
+    @Override
+    public String toString() {
+        return "KID Name:'"+ name +"', age:'"+age+"', gender:'"+gender+"', disease:'"+disease+"'";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

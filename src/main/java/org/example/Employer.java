@@ -1,33 +1,28 @@
 package org.example;
 
-public class Employer {
+public class Employer extends Human{
     String name;
     int age;
     String gender;
     int salary;
     String shelter;
-    public Employer(String name, int age, String gender, int salary, String shelter){
+    public Employer(String name, int age, String gender, int salary){
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.salary = salary;
-        this.shelter = shelter;
     }
     public Employer(){
         this.name = "unknown";
         this.age = -1;
         this.gender = "unknown";
         this.salary = -1;
-        this.shelter = "unknown";
     }
     void setName(String name){
         this.name = name;
     }
     void setSalary(int salary){
         this.salary = salary;
-    }
-    void setShelter(String shelter){
-        this.shelter = shelter;
     }
 
     String getName(){
@@ -42,7 +37,23 @@ public class Employer {
     int setSalary(){
         return this.salary;
     }
-    String setShelter(){
-        return this.shelter;
+
+    public void work(){
+        IO.println(name + "is working");
+    }
+
+    @Override
+    public String toString() {
+        return "Employer Name:'"+ name +"', age:'"+age+"', gender:'"+gender+"', salary:'"+salary+"'";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

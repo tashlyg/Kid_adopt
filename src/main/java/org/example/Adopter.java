@@ -1,6 +1,6 @@
 package org.example;
 
-class Adopter{
+public class Adopter extends Human{
     String name;
     int age;
     String gender;
@@ -30,5 +30,20 @@ class Adopter{
     }
     String getGender(){
         return this.gender;
+    }
+
+    @Override
+    public String toString() {
+        return "Adopter Name:'"+ name +"', age:'"+age+"', gender:'"+gender+"'";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

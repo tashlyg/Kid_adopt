@@ -31,4 +31,19 @@ class Shelter{
     int getPlaces(){
         return this.places;
     }
+
+    @Override
+    public String toString() {
+        return "SHELTER Name:'"+ name +"', location:'"+location+"', places:'"+places+"'";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

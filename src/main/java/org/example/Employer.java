@@ -1,15 +1,10 @@
 package org.example;
 
 public class Employer extends Human{
-    String name;
-    int age;
-    String gender;
     int salary;
     String shelter;
     public Employer(String name, int age, String gender, int salary){
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+        super(name, age, gender);
         this.salary = salary;
     }
     public Employer(){

@@ -1,13 +1,8 @@
 package org.example;
 
 public class Adopter extends Human{
-    String name;
-    int age;
-    String gender;
     public Adopter(String name, int age, String gender){
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+        super(name, age, gender);
     }
     public Adopter(){
         this.name = "unknown";

@@ -29,7 +29,7 @@ public class Employer extends Human{
     String getGender(){
         return this.gender;
     }
-    int setSalary(){
+    int getSalary(){
         return this.salary;
     }
 
@@ -39,7 +39,7 @@ public class Employer extends Human{
 
     @Override
     public String toString() {
-        return "Employer Name:'"+ name +"', age:'"+age+"', gender:'"+gender+"', salary:'"+salary+"'";
+        return "Employer Name:'"+ getName() +"', age:'"+ getAge() +"', gender:'"+ getGender() +"', salary:'"+ getSalary() +"'";
     }
 
     @Override

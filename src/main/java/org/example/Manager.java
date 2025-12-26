@@ -1,28 +1,26 @@
 package org.example;
 
 public class Manager extends Employer{
-    int teamSize;
+    private int teamSize;
     public Manager(String name, int age, String gender, int salary, int teamSize){
         super(name, age, gender, salary);
         this.teamSize = teamSize;
     }
 
-    String getName(){
-        return this.name;
+    public int getTeamSize() {
+        return teamSize;
     }
-    int getAge(){
-        return this.age;
-    }
-    String getGender(){
-        return this.gender;
-    }
-    int setSalary(){
-        return this.salary;
+
+    public void setTeamSize(int teamSize) {
+        if(teamSize < 0){
+            throw new IllegalArgumentException("Team size cant be negative");
+        }
+        this.teamSize = teamSize;
     }
 
     @Override
     public String toString() {
-        return "MANAGER Name:'"+ name +"', age:'"+age+"', gender:'"+gender+"', salary:'"+salary+"', teamSize:"+teamSize+"'";
+        return "Manager Name:'"+ getName() +"', age:'"+getAge()+"', gender:'"+getGender()+"', salary:'"+getSalary()+"', teamSize:"+getTeamSize()+"'";
     }
 
     @Override

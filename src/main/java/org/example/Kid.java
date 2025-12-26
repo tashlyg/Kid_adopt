@@ -35,7 +35,7 @@ public class Kid extends Human{
 
     @Override
     public String toString() {
-        return "KID Name:'"+ name +"', age:'"+age+"', gender:'"+gender+"', disease:'"+disease+"'";
+        return "Kid Name:'"+ name +"', age:'"+age+"', gender:'"+gender+"', disease:'"+disease+"'";
     }
 
     @Override

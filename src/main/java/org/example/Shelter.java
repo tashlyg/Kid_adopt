@@ -34,7 +34,7 @@ class Shelter{
 
     @Override
     public String toString() {
-        return "SHELTER Name:'"+ name +"', location:'"+location+"', places:'"+places+"'";
+        return "Shelter Name:'"+ name +"', location:'"+location+"', places:'"+places+"'";
     }
 
     @Override

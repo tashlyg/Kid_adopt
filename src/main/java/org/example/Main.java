@@ -16,6 +16,6 @@ public class Main {
         Employer employer1 = new Employer("Bob builder", 20, "Male", 100000);
 
         Manager manager1 = new Manager("Halo Malo", 40, "Female", 1000000, 5);
-        IO.println(kid1 +"\n" + kid2 + "\n" + kid3 + "\n" + shelter1 +"\n"+employer1+"\n"+manager1);
+        IO.println(kid1 +"\n" + kid2 + "\n" + adopter1 + "\n" + shelter1 +"\n"+employer1+"\n"+manager1);
     }
 }

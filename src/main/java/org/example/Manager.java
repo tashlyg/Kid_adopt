@@ -2,9 +2,8 @@ package org.example;
 
 public class Manager extends Employer{
     private int teamSize;
-    public Manager(String name, int age, String gender, int salary, int teamSize){
+    public Manager(String name, int age, String gender, int salary){
         super(name, age, gender, salary);
-        this.teamSize = teamSize;
     }
 
     public int getTeamSize() {

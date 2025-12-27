@@ -32,6 +32,9 @@ public class Employer extends Human{
     int getSalary(){
         return this.salary;
     }
+    int getID(){
+        return super.id;
+    }
 
     public void work(){
         IO.println(name + "is working");

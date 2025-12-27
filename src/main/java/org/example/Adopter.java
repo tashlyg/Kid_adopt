@@ -26,6 +26,9 @@ public class Adopter extends Human{
     String getGender(){
         return this.gender;
     }
+    int getID(){
+        return super.id;
+    }
 
     @Override
     public String toString() {

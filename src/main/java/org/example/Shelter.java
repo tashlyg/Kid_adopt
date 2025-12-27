@@ -1,6 +1,7 @@
 package org.example;
 
-class Shelter{
+public class Shelter{
+    public static int[] arr;
     String name;
     String location;
     int places;
@@ -14,7 +15,7 @@ class Shelter{
         this.location = "unknown";
         this.places = -1;
     }
-
+    void setKid(int id){arr.;}
     void setName(String name){
         this.name = name;
     }

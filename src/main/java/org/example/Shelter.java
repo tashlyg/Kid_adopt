@@ -1,7 +1,7 @@
 package org.example;
 
-public class Shelter{
-    public static int[] arr;
+public class Shelter extends BaseShelters{
+    private int id;
     String name;
     String location;
     int places;
@@ -15,7 +15,6 @@ public class Shelter{
         this.location = "unknown";
         this.places = -1;
     }
-    void setKid(int id){arr.;}
     void setName(String name){
         this.name = name;
     }
@@ -31,6 +30,9 @@ public class Shelter{
     }
     int getPlaces(){
         return this.places;
+    }
+    int getID(){
+        return super.id;
     }
 
     @Override

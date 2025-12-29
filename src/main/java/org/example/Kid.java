@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Objects;
+
 public class Kid extends Human{
     String disease;
     public Kid(String name, int age, String gender, String disease){
@@ -32,7 +34,9 @@ public class Kid extends Human{
     String getDisease(){
         return this.disease;
     }
-
+    int getID(){
+        return super.id;
+    }
 
     @Override
     public String toString() {
@@ -40,12 +44,15 @@ public class Kid extends Human{
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Kid that = (Kid) o;
+        return id == that.id && that.name.compareToIgnoreCase(name) == 0 && Objects.equals(age, that.age) && that.gender.compareToIgnoreCase(gender) == 0;
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(id, name, gender, disease);
     }
 }

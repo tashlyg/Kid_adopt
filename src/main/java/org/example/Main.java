@@ -11,7 +11,8 @@ public class Main {
         Kid kid2 = new Kid("Keegan Lu", 10, "Male", "He doesn't have left arm");
         Kid kid3 = new Kid("Benson Curtis", 14, "Male", "Brainroot");
 
-        Shelter shelter1 = new Shelter("Det dom", "London", 14, kid1); // doest have ID
+        Shelter shelter1 = new Shelter("Det dom", "London", 14);
+        Shelter shelter2 = new Shelter("Det dom", "London", 14);
 
         Employer employer1 = new Manager("Bob builder", 20, "Male", 100000);
         Employer employer2 = new Manager("Bob builder", 20, "Male", 100000);
@@ -21,8 +22,10 @@ public class Main {
 
         IO.println(kid1 +"\n" + kid2 + "\n" + adopter1 + "\n" + shelter1 +"\n"+employer1+"\n"+manager1);
         IO.println(adopter1.getID());
-        IO.println(employer1.getID());
+        IO.println(shelter2.getID());
         IO.println(employer2.getID());
         IO.println(employer3.getID());
+        IO.println(kid1.equals(kid1));
+        IO.println(kid1.hashCode());
     }
 }

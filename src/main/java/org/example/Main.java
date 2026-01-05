@@ -1,6 +1,7 @@
 package org.example;
 
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     static void main() {
@@ -20,12 +21,19 @@ public class Main {
 
         Manager manager1 = new Manager("Halo Malo", 40, "Female", 1000000);
 
-        IO.println(kid1 +"\n" + kid2 + "\n" + adopter1 + "\n" + shelter1 +"\n"+employer1+"\n"+manager1);
-        IO.println(adopter1.getID());
-        IO.println(shelter2.getID());
-        IO.println(employer2.getID());
-        IO.println(employer3.getID());
-        IO.println(kid1.equals(kid1));
-        IO.println(kid1.hashCode());
+        IO.println(shelter1.getKid2());
+
+        List<Adopter> adopters = new ArrayList<>();
+        adopters.add(new Adopter("Liay Bover", 25, "Male"));
+        adopters.add(new Adopter("Key Man", 30, "Female"));
+        adopters.add(new Adopter("Oh Men", 22, "Male"));
+        adopters.add(new Adopter("Me Drom", 35, "Female"));
+        adopters.add(new Adopter("You Kim", 28, "Male"));
+
+        FilterManager<Adopter> manager = new FilterManager<>(adopters);
+
+        IO.println("=== Male ppl ===");
+        List<Adopter> MalePeople = manager.filter(p -> p.getGender().equals("Male"));
+        MalePeople.forEach(System.out::println);
     }
 }

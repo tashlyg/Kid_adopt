@@ -5,6 +5,11 @@ public class Shelter extends BaseShelters{
     String name;
     String location;
     int places;
+    Kid kid2 = new Kid();
+
+    public Kid getKid2() {
+        return kid2;
+    }
     public Shelter(String name, String location, int places){
         this.name = name;
         this.location = location;

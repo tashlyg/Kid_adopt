@@ -11,7 +11,6 @@ public class FilterManager<T> {
         this.data = new ArrayList<>(data);
     }
 
-    // 1. МЕТОД ДЛЯ ФИЛЬТРАЦИИ
     public List<T> filter(Predicate<T> condition) {
         return data.stream()
                 .filter(condition)

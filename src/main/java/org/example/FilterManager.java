@@ -17,7 +17,6 @@ public class FilterManager<T> {
                 .collect(Collectors.toList());
     }
 
-    // 2. МЕТОД ДЛЯ ПОИСКА
     public List<T> search(String keyword, Function<T, String> fieldGetter) {
         return data.stream()
                 .filter(item -> {
@@ -29,14 +28,12 @@ public class FilterManager<T> {
                 .collect(Collectors.toList());
     }
 
-    // 3. МЕТОД ДЛЯ СОРТИРОВКИ
     public List<T> sort(Comparator<T> comparator) {
         return data.stream()
                 .sorted(comparator)
                 .collect(Collectors.toList());
     }
 
-    // 4. МЕТОД ДЛЯ ПАГИНАЦИИ
     public List<T> getPage(int pageNumber, int pageSize) {
         if (data == null || data.isEmpty()) {
             return Collections.emptyList();
@@ -51,7 +48,6 @@ public class FilterManager<T> {
         return data.subList(fromIndex, toIndex);
     }
 
-    // 5. ДОБАВЛЕНИЕ/УДАЛЕНИЕ ДАННЫХ
     public void addItem(T item) {
         if (data == null) {
             data = new ArrayList<>();
@@ -65,7 +61,6 @@ public class FilterManager<T> {
         }
     }
 
-    // Геттер для получения всех данных
     public List<T> getAllData() {
         return new ArrayList<>(data);
     }

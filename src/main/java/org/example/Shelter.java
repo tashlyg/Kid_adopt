@@ -44,14 +44,4 @@ public class Shelter extends BaseShelters{
     public String toString() {
         return "Shelter Name:'"+ name +"', location:'"+location+"', places:'"+places+"'";
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
 }

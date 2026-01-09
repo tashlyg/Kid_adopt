@@ -6,5 +6,4 @@ public abstract class BaseShelters {
     public BaseShelters(){
         this.id = counter++;
     }
-
 }

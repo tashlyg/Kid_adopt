@@ -2,53 +2,36 @@ package org.example;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
 public class Main {
-    private static final String URL = "jdbc:postgresql://localhost:5432/AdoptKidSystem";
-    private static final String USER = "postgres";
-    private static final String PASS = "root";
-
-    private static void insertData(Connection conn, int id, String desc, double budget) throws SQLException {
-        String query = "INSERT INTO job_listing (id, description, budget) VALUES (?, ?, ?)";
-        try (PreparedStatement pst = conn.prepareStatement(query)) {
-            pst.setInt(1, id);
-            pst.setString(2, desc);
-            pst.setDouble(3, budget);
-            pst.executeUpdate();
-        }
-    }
-
-    private static List<String> selectData(Connection conn) throws SQLException {
-        List<String> results = new ArrayList<>();
-        String query = "SELECT * FROM job_listing";
-        try (Statement st = conn.createStatement();
-             ResultSet rs = st.executeQuery(query)) {
-            while (rs.next()) {
-                results.add(rs.getInt("id") + " - " + rs.getString("description") + ": " + rs.getDouble("budget"));
-            }
-        }
-        return results;
-    }
-
-    private static void updateData(Connection conn, int id, double newBudget) throws SQLException {
-        String query = "UPDATE job_listing SET budget = ? WHERE id = ?";
-        try (PreparedStatement pst = conn.prepareStatement(query)) {
-            pst.setDouble(1, newBudget);
-            pst.setInt(2, id);
-            pst.executeUpdate();
-        }
-    }
-
-    private static void deleteData(Connection conn, int id) throws SQLException {
-        String query = "DELETE FROM job_listing WHERE id = ?";
-        try (PreparedStatement pst = conn.prepareStatement(query)) {
-            pst.setInt(1, id);
-            pst.executeUpdate();
-        }
-    }
     static void main() {
+
+        String url = "jdbc:postgresql://localhost:5432/AdoptKidSystem";
+        String user = "postgres";
+        String password = "0294567890-=DM!";
+
+        try {
+            // Attempt to establish a connection
+            Connection connection = DriverManager.getConnection(url, user, password);
+
+            if (connection != null) {
+                System.out.println("Connected to the PostgreSQL server successfully.");
+            } else {
+                System.out.println("Failed to make connection!");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Connection failure.");
+            e.printStackTrace();
+        }
+
+
+
+
         Adopter adopter1 = new Adopter("Briar Morrow", 30, "Female");
         Adopter adopter2 = new Adopter("Reyna Chang", 40, "Male");
 
@@ -65,8 +48,6 @@ public class Main {
 
         Manager manager1 = new Manager("Halo Malo", 40, "Female", 1000000);
 
-        IO.println(shelter1.getKid2());
-
         List<Adopter> adopters = new ArrayList<>();
         adopters.add(new Adopter("Liay Bover", 25, "Male"));
         adopters.add(new Adopter("Key Man", 30, "Female"));
@@ -79,29 +60,6 @@ public class Main {
         IO.println("=== Male ppl ===");
         List<Adopter> MalePeople = manager.filter(p -> p.getGender().equals("Male"));
         MalePeople.forEach(System.out::println);
-
-        // test sql hahaha
-        try {
-            Class.forName("org.postgresql.Driver");
-
-            try (Connection conn = DriverManager.getConnection(URL, USER, PASS)) {
-
-                insertData(conn, 10, "Mobile App Dev", 3000.00);
-                insertData(conn, 20, "Logo Design", 200.00);
-
-                List<String> data = selectData(conn);
-                for (String s : data) System.out.println(s);
-
-                updateData(conn, 10, 3500.00);
-
-                deleteData(conn, 20);
-
-                System.out.println("--- Final State ---");
-                selectData(conn).forEach(System.out::println);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
 
     }

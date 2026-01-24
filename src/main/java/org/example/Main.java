@@ -9,7 +9,6 @@ import java.sql.SQLException;
 
 public class Main {
     static void main() {
-
         String url = "jdbc:postgresql://localhost:5432/AdoptKidSystem";
         String user = "postgres";
         String password = "0294567890-=DM!";
@@ -20,15 +19,23 @@ public class Main {
 
             if (connection != null) {
                 System.out.println("Connected to the PostgreSQL server successfully.");
+
+                Employer emp = new Employer();
+                Kid kid = new Kid();
+
+                //emp.insertEmployer(connection, "Alice", 32, "Female", 1000);
+                //kid.insertKid(connection, "Fatima Copeland", 7, "Female", "Healthy");
+                //kid.insertKid(connection,"Keegan Lu", 10, "Male", "He doesn't have left arm");
+
+                emp.selectEmployer(connection);
+                kid.selectKid(connection);
             } else {
                 System.out.println("Failed to make connection!");
             }
-
         } catch (SQLException e) {
             System.out.println("Connection failure.");
             e.printStackTrace();
         }
-
 
 
 

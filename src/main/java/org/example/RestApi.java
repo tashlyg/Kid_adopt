@@ -13,6 +13,8 @@ public class RestApi {
 
     public static void main(String[] args) {
         port(4567);
+        get("/test", (req, res) -> "Server is working!");
+        put("/test", (req, res) -> "Server is working!");
         exception(Exception.class, (e, req, res) -> {
             e.printStackTrace(); // Print to console
             res.status(500);

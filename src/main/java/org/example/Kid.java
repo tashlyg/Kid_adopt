@@ -27,19 +27,19 @@ public class Kid extends Human{
         this.disease = disease;
     }
 
-    String getName(){
+    public String getName(){
         return this.name;
     }
-    int getAge(){
+    public int getAge(){
         return this.age;
     }
-    String getGender(){
+    public String getGender(){
         return this.gender;
     }
-    String getDisease(){
+    public String getDisease(){
         return this.disease;
     }
-    int getID(){
+    public int getID(){
         return super.id;
     }
 
@@ -78,7 +78,7 @@ public class Kid extends Human{
         }
     }
 
-    
+
 
     @Override
     public String toString() {

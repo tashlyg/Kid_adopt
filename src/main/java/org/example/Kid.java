@@ -78,6 +78,7 @@ public class Kid extends Human{
         }
     }
 
+    
 
     @Override
     public String toString() {

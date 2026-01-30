@@ -32,7 +32,7 @@ public class Main {
                 //adopter.insertAdopter(connection,"Briar Morrow", 30, "Female");
                 //adopter.insertAdopter(connection,"Reyna Chang", 40, "Male");
                 //manager.insertManager(connection,"Halo Malo", 40, "Female", 1000000);
-                shelter.insertShelter(connection,"Det dom", "London", 14);
+                //shelter.insertShelter(connection,"Det dom", "London", 14);
 
                 IO.println("Employer************");
                 emp.selectEmployer(connection);

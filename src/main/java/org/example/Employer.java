@@ -62,7 +62,6 @@ public class Employer extends Human{
             System.out.println(e.getMessage());
         }
     }
-
     public void selectEmployer(Connection conn) {
         String sql1 = "SELECT employer_name, employer_age, employer_gender, employer_salary FROM employer";
 

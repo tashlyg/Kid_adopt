@@ -22,13 +22,32 @@ public class Main {
 
                 Employer emp = new Employer();
                 Kid kid = new Kid();
+                Adopter adopter = new Adopter();
+                Manager manager = new Manager();
+                Shelter shelter = new Shelter();
 
                 //emp.insertEmployer(connection, "Alice", 32, "Female", 1000);
                 //kid.insertKid(connection, "Fatima Copeland", 7, "Female", "Healthy");
                 //kid.insertKid(connection,"Keegan Lu", 10, "Male", "He doesn't have left arm");
+                //adopter.insertAdopter(connection,"Briar Morrow", 30, "Female");
+                //adopter.insertAdopter(connection,"Reyna Chang", 40, "Male");
+                //manager.insertManager(connection,"Halo Malo", 40, "Female", 1000000);
+                shelter.insertShelter(connection,"Det dom", "London", 14);
 
+                IO.println("Employer************");
                 emp.selectEmployer(connection);
+
+                IO.println("Kid************");
                 kid.selectKid(connection);
+
+                IO.println("Adopter************");
+                adopter.selectAdopter(connection);
+
+                IO.println("Manager**************");
+                manager.selectManager(connection);
+
+                IO.println("Shelter**************");
+                shelter.selectShelter(connection);
             } else {
                 System.out.println("Failed to make connection!");
             }
@@ -36,11 +55,6 @@ public class Main {
             System.out.println("Connection failure.");
             e.printStackTrace();
         }
-
-
-
-        Adopter adopter1 = new Adopter("Briar Morrow", 30, "Female");
-        Adopter adopter2 = new Adopter("Reyna Chang", 40, "Male");
 
         Kid kid1 = new Kid("Fatima Copeland", 7, "Female", "Healthy");
         Kid kid2 = new Kid("Keegan Lu", 10, "Male", "He doesn't have left arm");

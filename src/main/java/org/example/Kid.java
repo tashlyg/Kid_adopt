@@ -61,9 +61,9 @@ public class Kid extends Human{
         }
     }
     public void selectKid(Connection conn) {
-        String sql1 = "SELECT kid_name, kid_age, kid_gender, kid_disease FROM kid";
+        String sql = "SELECT kid_name, kid_age, kid_gender, kid_disease FROM kid";
 
-        try (PreparedStatement pstmt = conn.prepareStatement(sql1)) {
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()){
                 IO.println(
